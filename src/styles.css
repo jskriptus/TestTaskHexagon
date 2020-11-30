@@ -1,0 +1,118 @@
+.grid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hex, .checked-hex {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hex {
+  background-color: rgb(220, 220, 220);
+}
+
+.cheked-hex {
+  --chekedBackground: rgb(220, 220, 220);
+}
+
+.hex:before, .checked-hex:before,
+.hex:after, .checked-hex:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+
+.hex:before, .checked-hex:before {
+  bottom: 100%;
+  border-bottom: 5px solid rgb(220, 220, 220);
+  cursor: pointer;
+}
+
+.hex:after, .checked-hex:after {
+  top: 100%;
+  width: 0;
+  border-top: 5px solid rgb(220, 220, 220);
+  cursor: pointer;
+}
+
+.checked-hex:before {
+  border-bottom: 5px solid var(--chekedBackground);
+}
+
+.checked-hex:after {
+  border-top: 5px solid var(--chekedBackground);
+}
+
+.show-button, .chance-button {
+  display: block;
+  width: 100%;
+}
+
+.size-form {
+  align-items: center;
+  display: flex;
+  height: 200px;
+}
+
+.size-form-label {
+  color: white;
+}
+
+.size-form-extra {
+  color:#00990e;
+}
+
+.ant-form {
+  margin-right: 20px;
+}
+
+.ant-form-item {
+  margin-bottom: 15px;
+}
+
+.ant-result-icon {
+  margin-bottom: 0;
+}
+
+.ant-result-extra {
+  margin: 0 0 0 0;
+}
+
+.ant-result {
+  padding: 0;
+}
+
+.ant-result-title {
+  margin-bottom: 8px;
+  margin-top: -15px;
+  line-height: 1.1;
+  color: rgb(255 255 255 / 85%);
+}
+
+.ant-layout-content {
+  padding: 25px;
+  height: 100vh;
+}
+
+.ant-divider-horizontal {
+  margin: 37px 0 0;
+  border-top: 1px solid rgb(255 255 255 / 66%);
+}
+
+.ant-layout {
+  background: #ffffff;
+}
+
+.ant-layout-sider-children {
+  border-right: 1px solid rgb(255 255 255 / 66%);
+}
