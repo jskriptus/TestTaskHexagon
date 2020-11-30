@@ -1,4 +1,4 @@
-import { OFFSET_HEX_X, OFFSET_HEX_Y } from '../constans'
+import { OFFSET_HEX_X, OFFSET_HEX_Y } from '../constants'
 
 export const generateGrid = (size) => {
   let grid = [];

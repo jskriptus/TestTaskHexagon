@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../styles.css";
-import { DEFAULT_CHANCE, MIN_CHANCE, MAX_CHANCE, CHANCE_STEP } from "../../constans";
+import { DEFAULT_CHANCE, MIN_CHANCE, MAX_CHANCE, CHANCE_STEP } from "../../constants";
 import {
   Form,
   InputNumber,

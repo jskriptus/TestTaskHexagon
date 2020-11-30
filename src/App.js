@@ -5,7 +5,7 @@ import DomainsResult from "./components/DomainsResult";
 import Content from "./components/Content";
 import ResultTable from "./components/ResultTable";
 import { Layout, Drawer } from "antd";
-import { TABLE_ROWS_LIMIT, HEX_NEIGHBORS_COUNT } from "./constans";
+import { TABLE_ROWS_LIMIT, HEX_NEIGHBORS_COUNT } from "./constants";
 import { generateGrid, generateRandomColor } from "./utils";
 
 export default function App() {
@@ -112,7 +112,7 @@ export default function App() {
   const splitDomain = (hex, gridHexes) => {
     const unchekedHexId = hex.id;
 
-    // Определяем гексогоны которые входят в состав разделяемого домена
+    // Определяем гексагоны которые входят в состав разделяемого домена
     const domainHexes = gridHexes
       .filter((h) => h.domainColor === hex.domainColor && h.id !== unchekedHexId);
     const domainHexesIds = domainHexes.map((h) => h.id);
@@ -193,7 +193,7 @@ export default function App() {
       // Определяем домен соседей
       const neightborsDomains = findNeighborsDomains(neighbors);
 
-      // Домен соседей не совпадает с ранее определенным доменом, либо гексоген нарушает условия полого домена
+      // Домен соседей не совпадает с ранее определенным доменом, либо гексагон нарушает условия полого домена
       // То прерываем выполнение функции с отрицательным результатом
       if ((neightborsDomains[0] && neightborsDomains[0] !== domain) || !rightHexesIds.includes(hex.id)) {
         return false;

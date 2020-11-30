@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { InputNumber, Space, Form, Button } from "antd";
-import { DEFAULT_GRID_SIZE, MIN_GRID_SIZE, MAX_GRID_SIZE, GRID_SIZE_STEP } from "../../constans";
+import { DEFAULT_GRID_SIZE, MIN_GRID_SIZE, MAX_GRID_SIZE, GRID_SIZE_STEP } from "../../constants";
 import { objectToArray } from "../../utils/";
 import "../../styles.css";
 
